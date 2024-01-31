@@ -1,0 +1,12 @@
+.app{
+    display: flex;
+    gap: 24px;
+}
+
+.appContent{
+    padding: 40px 11.875vw 0 0 ;
+    width: 100%;
+    box-sizing: border-box;
+    background: #FAFAFA;
+}
+

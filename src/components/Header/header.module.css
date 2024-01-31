@@ -1,0 +1,87 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.statistics {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.statisticsIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    background: #A6FF42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statisticsInfo p:nth-child(1) {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+
+}
+
+.statisticsInfo p:nth-child(2) {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    color: #222222;
+
+
+}
+
+.statisticsArrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 40px;
+}
+
+.headerLanguage {
+    background: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 4px 0px #22222233 inset;
+    box-shadow: -2px -2px 4px 0px #22222233 inset;
+    display: flex;
+    align-items: center;
+    width: 88px;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background: #00B83F;
+    border-radius: 12px;
+    padding: 12px 20px;
+
+}
+
+.button a {
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FFFFFF;
+    align-items: center;
+    text-decoration: none;
+    
+
+}
