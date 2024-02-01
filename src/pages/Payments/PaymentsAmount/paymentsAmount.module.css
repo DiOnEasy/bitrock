@@ -18,6 +18,7 @@
     display: flex;
     gap: 24px;
     margin-bottom: 40px;
+    justify-content: space-between;
 }
 
 .amountItem {

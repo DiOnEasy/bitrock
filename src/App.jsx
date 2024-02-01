@@ -1,5 +1,13 @@
 import { Routes, Route, Router } from "react-router-dom";
-import { Login, Payments, Registration } from "./pages/index";
+import {
+  Academy,
+  Help,
+  Login,
+  Notifications,
+  Payments,
+  Registration,
+  Statistics,
+} from "./pages/index";
 import { SideBar } from "./components/SideBar/sideBar";
 import s from "./App.module.css";
 import { Header } from "./components/Header/header";
@@ -11,13 +19,17 @@ function App() {
           <SideBar />
         ) : null}
         <div className={s.appContent}>
-        {window.location.pathname !== ("/login" || "/registration") ? (
-          <Header />
-        ) : null}
+          {window.location.pathname !== ("/login" || "/registration") ? (
+            <Header />
+          ) : null}
           <Routes>
             <Route path="/" element={<Payments />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/academy" element={<Academy />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/statistics" element={<Statistics />} />
+            <Route path="/help" element={<Help />} />
           </Routes>
         </div>
       </div>

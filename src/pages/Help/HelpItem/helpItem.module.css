@@ -1,0 +1,53 @@
+.helpItem {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.helpItemImg {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A6FF42;
+    border-radius: 1000px;
+    margin-bottom: 20px;
+}
+
+.helpItemData {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.appNum {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #222222;
+}
+
+.appDate {
+    color: #8C8C8C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.appStatus {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #8C8C8C;
+
+
+}
+
+.appStatus p:nth-child(2) {
+    color: #224A28;
+
+}

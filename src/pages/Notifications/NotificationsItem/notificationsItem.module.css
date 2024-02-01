@@ -1,0 +1,38 @@
+.item {
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+.itemTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.itemDate {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #8C8C8C;
+    margin-bottom: 8px;
+}
+
+.itemHeaderText {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #222222;
+}
+
+.itemText {
+    color: #8C8C8C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 20px;
+}
+
+.itemArrowActive{
+    transform: rotate(180deg);
+}

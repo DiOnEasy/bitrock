@@ -11,6 +11,7 @@
     font-weight: 600;
 }
 body, body * {
+  box-sizing: border-box;
 margin: 0 0;
 padding: 0 0;
 font-family: 'Gilroy', Arial, Helvetica, sans-serif;

@@ -1,0 +1,20 @@
+.notifications {
+    margin-top: 40px;
+    background: #FCFFF2;
+    max-width: 1340px;
+    padding: 40px;
+}
+
+.notificationsHeader {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    color: #222222;
+    text-align: center;
+}
+
+.notificationsItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

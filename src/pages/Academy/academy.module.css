@@ -1,0 +1,27 @@
+.academy {
+    max-width: 1340px;
+    margin-top: 40px;
+}
+
+
+.knoweledge {
+    background: #FCFFF2;
+    border-radius: 4px;
+    padding: 40px;
+
+}
+
+.header {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.knoweledgeItems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}

@@ -1,0 +1,56 @@
+.help {
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 4px;
+    background: #FCFFF2;
+    max-width: 1340px;
+}
+
+.helpHeader {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    color: #222222;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.helpText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: #8C8C8C;
+    margin-bottom: 40px;
+}
+
+.helpItems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.newChat {
+    background: #224A28;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.newChatImg {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A6FF42;
+    border-radius: 1000px;
+    margin-bottom: 20px;
+}
+
+.newChatText {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #FFFFFF;
+}

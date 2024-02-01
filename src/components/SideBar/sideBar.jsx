@@ -21,7 +21,6 @@ export const SideBar = () => {
       </div>
       <div className={s.links}>
         {links.map((link, index) => {
-          console.log(link.link, location.pathname)
          const isActive = `/${link.link}` == location.pathname;
           return (
             <Link className={isActive ? s.activeLink : ''} key={index} to={`/${link.link}`}>
