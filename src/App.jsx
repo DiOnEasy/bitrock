@@ -29,7 +29,7 @@ function App() {
             <Route path="/academy" element={<Academy />} />
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/statistics" element={<Statistics />} />
-            <Route path="/help" element={<Help />} />
+            <Route path="/help/:id?" element={<Help />} />
           </Routes>
         </div>
       </div>

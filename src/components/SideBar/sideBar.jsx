@@ -21,7 +21,7 @@ export const SideBar = () => {
       </div>
       <div className={s.links}>
         {links.map((link, index) => {
-         const isActive = `/${link.link}` == location.pathname;
+         const isActive = (`${link.link}`) == location.pathname.split('/')[1];
           return (
             <Link className={isActive ? s.activeLink : ''} key={index} to={`/${link.link}`}>
               <img src={`/img/sidebar-icons/link-${index + 1}.svg`} alt="" />

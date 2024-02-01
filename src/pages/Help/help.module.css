@@ -5,6 +5,9 @@
     background: #FCFFF2;
     max-width: 1340px;
 }
+.help a{
+    text-decoration: none;
+}
 
 .helpHeader {
     font-size: 32px;
@@ -35,6 +38,7 @@
     border-radius: 4px;
     padding: 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .newChatImg {

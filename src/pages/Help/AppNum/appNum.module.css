@@ -1,0 +1,16 @@
+.appNum {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(90deg, #FFA732 0%, rgba(34, 74, 40, 0) 0.01%, #224A28 49.9%, rgba(34, 74, 40, 0) 100%);
+    border-image-slice: 1;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.appNum span {
+    font-weight: 600;
+}
