@@ -6,6 +6,7 @@ import {
   Notifications,
   Payments,
   Registration,
+  Settings,
   Statistics,
 } from "./pages/index";
 import { SideBar } from "./components/SideBar/sideBar";
@@ -30,6 +31,8 @@ function App() {
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/statistics" element={<Statistics />} />
             <Route path="/help/:id?" element={<Help />} />
+            <Route path="/settings" element={<Settings />} />
+
           </Routes>
         </div>
       </div>
