@@ -1,4 +1,5 @@
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route, Router, Navigate } from "react-router-dom";
+
 import {
   Academy,
   Help,
@@ -24,7 +25,10 @@ function App() {
             <Header />
           ) : null}
           <Routes>
-            <Route path="/" element={<Payments />} />
+            <Route path="/" element={<Navigate to="/payments" />} />
+            <Route path="/payments" element={<Payments />} />
+            <Route path="/payments/activate-deposit" element={<Payments />} />
+            <Route path="/payments/confirm-payment" element={<Payments />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
             <Route path="/academy" element={<Academy />} />
@@ -32,7 +36,6 @@ function App() {
             <Route path="/statistics" element={<Statistics />} />
             <Route path="/help/:id?" element={<Help />} />
             <Route path="/settings" element={<Settings />} />
-
           </Routes>
         </div>
       </div>

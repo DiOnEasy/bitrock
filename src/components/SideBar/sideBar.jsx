@@ -4,7 +4,7 @@ import s from "./sideBar.module.css";
 export const SideBar = () => {
   const links = [
     { text: "Statistics", link: "statistics" },
-    { text: "Payments", link: "" },
+    { text: "Payments", link: "payments" },
     { text: "Transactions", link: "transactions" },
     { text: "Settings", link: "settings" },
     { text: "Аcademy", link: "academy" },

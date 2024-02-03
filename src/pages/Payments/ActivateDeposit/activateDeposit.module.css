@@ -1,0 +1,155 @@
+.activateDeposit {
+    padding: 30px;
+    border-radius: 4px;
+    background: #FCFFF2;
+}
+
+.activateDepositHeader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.activateDepositHeaderLeft,
+.activateDepositHeaderRight {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    color: #222222;
+}
+
+.activateDepositHeaderLeft span,
+.activateDepositHeaderRight span {
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.activateDepositContent {
+    display: flex;
+    gap: 40px;
+}
+
+.activateDepositForm {
+    background: #FFFFFF;
+    padding: 20px 40px;
+    border-radius: 4px;
+}
+
+.activateDepositLabel {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    color: #222222;
+    margin-bottom: 12px;
+}
+
+
+.activateDepositInput input {
+    border: none;
+    background: #E8ECD8;
+    padding: 20px 100px 20px 40px;
+    border-radius: 1000px;
+    width: 320px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #222222;
+}
+
+.activateDepositInputCurrency {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    position: absolute;
+    color: #222222;
+    top: 20px;
+    right: 40px;
+}
+
+.activateDepositInput {
+    position: relative;
+}
+
+.activateDepositInput input::placeholder {
+    color: #8C8C8C;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.activateDepositSelect {
+    margin-bottom: 40px;
+}
+
+.activateDepositButton button {
+    cursor: pointer;
+    margin-top: 40px;
+    background: #00B83F;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+
+}
+
+.activateDepositText {
+    width: 100%;
+}
+
+.activateDepositPercentage {
+    background: #FFFFFF;
+    padding: 20px 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.activateDepositPercentage span:nth-child(1) {
+    max-width: 68px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #222222;
+}
+
+.activateDepositPercentage span:nth-child(2) {
+    color: #00B83F;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 78px;
+}
+
+.activateDepositItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: space-between;
+    padding: 20px 0 20px 40px;
+}
+
+.activateDepositItem p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #8C8C8C;
+    margin-bottom: 8px;
+}
+
+.activateDepositItem p:nth-child(2) {
+    color: #224A28;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+}
