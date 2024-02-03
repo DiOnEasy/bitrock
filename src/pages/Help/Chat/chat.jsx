@@ -1,8 +1,10 @@
 import s from "./chat.module.css";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export const Chat = () => {
   const scrollRef = useRef(null);
+
+  const [fileName, setFileName] = useState(null);
 
   useEffect(() => {
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -25,12 +27,6 @@ export const Chat = () => {
             Сообщение автора или 2 человека
           </div>
         </div>
-
-       
-
-
-
-
       </div>
       <div className={s.inputs}>
         <input
@@ -39,11 +35,24 @@ export const Chat = () => {
           type="text"
         />
         <div className={s.fileInputWrapper}>
-          <p className={s.fileInputText}>
-            <span>Attach a file</span>
-            <img src="/img/attach-file-icon.svg" alt="" />
-          </p>
-          <input className={s.fileInput} type="file" />
+          {fileName ? (
+            <p className={s.fileInputText}>
+              <span>{fileName}</span>
+            </p>
+          ) : (
+            <p className={s.fileInputText}>
+              <span>Attach a file</span>
+              <img src="/img/attach-file-icon.svg" alt="" />
+            </p>
+          )}
+          <input
+            onChange={(e) => {
+              const file = e.target.files[0];
+              setFileName(file.name)
+            }}
+            className={s.fileInput}
+            type="file"
+          />
         </div>
       </div>
       <div>

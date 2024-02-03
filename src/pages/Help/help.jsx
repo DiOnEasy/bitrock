@@ -49,7 +49,7 @@ export const Help = () => {
           </>
         )}
         {newChat && <CreateChat />}
-        {id && <Chat />}
+        {!newChat && id && <Chat />}
       </div>
     </>
   );
