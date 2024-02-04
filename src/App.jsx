@@ -9,6 +9,7 @@ import {
   Registration,
   Settings,
   Statistics,
+  Transactions,
 } from "./pages/index";
 import { SideBar } from "./components/SideBar/sideBar";
 import s from "./App.module.css";
@@ -36,6 +37,7 @@ function App() {
             <Route path="/statistics" element={<Statistics />} />
             <Route path="/help/:id?" element={<Help />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/transactions" element={<Transactions/>}/>
           </Routes>
         </div>
       </div>

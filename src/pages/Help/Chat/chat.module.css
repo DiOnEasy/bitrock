@@ -90,16 +90,17 @@
 
 .fileInputWrapper {
     position: relative;
-    width: 228px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #222222;
-    border-radius: 12px;
+    
+   
+    
 
 }
 
 .fileInputText {
+    height: 100%;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    width: 228px;
     display: flex;
     gap: 15px;
     align-items: center;

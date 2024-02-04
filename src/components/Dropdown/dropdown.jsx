@@ -5,15 +5,22 @@ export const DropdownComponent = ({
   dropdownOptions,
   activeOption,
   setActiveOption,
+  dropdownHeader,
 }) => {
   const [isOpened, setIsOpened] = useState(false);
 
-  console.log(dropdownOptions);
   return (
     <div className={s.dropdown}>
-      <div onClick={() => setIsOpened(true)} className={s.dropdownHeader}>
-        <img src={dropdownOptions[activeOption].image} alt="" />{" "}
-        <span>{dropdownOptions[activeOption].text}</span>
+      <div onClick={() => setIsOpened(!isOpened)} className={s.dropdownHeader}>
+        {activeOption !== null ? (
+          <>
+            <img src={dropdownOptions[activeOption].image} alt="" />
+            <span>{dropdownOptions[activeOption].text}</span>
+          </>
+        ) : (
+          <span>{dropdownHeader}</span>
+        )}
+        <span className={s.dropdownArrow}><img src="/img/notification-arrow.svg" alt="" /></span>
       </div>
       {isOpened && (
         <div className={s.dropdownOptions}>

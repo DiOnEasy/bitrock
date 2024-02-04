@@ -23,7 +23,6 @@
 .dropdownHeader {
 
     padding: 4px 40px;
-    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -40,6 +39,9 @@
     padding: 12px 40px;
     border-radius: 100px;
     height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 

@@ -6,3 +6,4 @@ export { Notifications } from "./Notifications/notifications.jsx";
 export { Statistics } from "./Statistics/statistics.jsx";
 export { Help } from "./Help/help.jsx";
 export { Settings } from "./Settings/settings.jsx";
+export { Transactions } from "./Transactions/transactions.jsx";

@@ -1,0 +1,35 @@
+.date,
+.operation,
+.currency,
+.amount {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #222222;
+}
+
+.operation,
+.currency {
+    color: #00B83F;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.currency {
+    color: #222222;
+}
+
+.operationImg img,
+.currencyImg img {
+    max-width: 19.2px;
+    max-height: 19.2px;
+}
+
+.operationImg, .currencyImg{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
