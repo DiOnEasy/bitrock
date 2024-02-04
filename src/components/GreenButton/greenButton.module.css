@@ -1,0 +1,13 @@
+
+.greenButton {
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #FFFFFF;
+    background: #00B83F;
+    border: none;
+    cursor: pointer;
+}

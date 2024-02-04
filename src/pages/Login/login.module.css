@@ -7,13 +7,3 @@
     justify-content: center;
 }
 
-.password__input {
-    position: relative;
-}
-
-.password__input img {
-    position: absolute;
-    top: 23.5px;
-    right: 42px;
-    cursor: pointer;
-}

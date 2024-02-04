@@ -1,3 +1,4 @@
+import { GreenButton } from "../../../components/GreenButton/greenButton";
 import s from "./chat.module.css";
 import { useRef, useEffect, useState } from "react";
 
@@ -48,7 +49,7 @@ export const Chat = () => {
           <input
             onChange={(e) => {
               const file = e.target.files[0];
-              setFileName(file.name)
+              setFileName(file.name);
             }}
             className={s.fileInput}
             type="file"
@@ -56,7 +57,9 @@ export const Chat = () => {
         </div>
       </div>
       <div>
-        <button className={s.messagesButton}>Send</button>
+        <div className={s.messagesButton}>
+          <GreenButton text={'Send'} />
+        </div>
       </div>
     </div>
   );

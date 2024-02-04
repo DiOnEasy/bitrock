@@ -48,15 +48,3 @@
     resize: none;
 }
 
-.appSubjectButton button {
-    width: 100%;
-    border: none;
-    padding: 20px 40px;
-    border-radius: 12px;
-    background: #00B83F;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 25px;
-    color: #FFFFFF;
-    cursor: pointer;
-}

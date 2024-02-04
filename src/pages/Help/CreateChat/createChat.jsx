@@ -1,3 +1,4 @@
+import { GreenButton } from "../../../components/GreenButton/greenButton";
 import s from "./createChat.module.css";
 
 export const CreateChat = () => {
@@ -16,7 +17,7 @@ export const CreateChat = () => {
           <textarea className={s.appDescInput}  type="text" />
         </div>
         <div className={s.appSubjectButton}>
-          <button>Send</button>
+          <GreenButton text={'Send'} />
         </div>
       </div>
     </div>

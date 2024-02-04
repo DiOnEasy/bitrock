@@ -1,0 +1,80 @@
+.settings {
+    background: #FCFFF2;
+    padding: 40px;
+    border-radius: 4px;
+    margin-top: 40px;
+    max-width: 1340px;
+
+}
+
+.settingsInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.settingsHeader {
+    color: #222222;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.settingsContent {
+    display: flex;
+    gap: 20px;
+}
+
+.settingsBasicInfo {
+    padding: 20px 40px;
+}
+
+.settingsBasicInfoHeader {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    color: #222222;
+    margin-bottom: 12px;
+
+}
+
+.settingsBasicInfoItems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.passwordInputs {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.passwordInputsButton {
+    margin-top: 8px;
+}
+
+.paymentDetails {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.paymentDetailsButton {
+    margin-top: 20px;
+}
+
+.protectionText {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #8C8C8C;
+
+
+}
