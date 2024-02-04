@@ -28,6 +28,13 @@ export const Transactions = () => {
           <div className={s.transactionsSortItem}>
             <p>Currency</p>
             <DropdownComponent
+            style={{
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
               activeOption={activeCurrency}
               setActiveOption={setActiveCurrency}
               dropdownOptions={dropdownCurrencies}
@@ -37,6 +44,14 @@ export const Transactions = () => {
           <div className={s.transactionsSortItem}>
             <p>Operations</p>
             <DropdownComponent
+              style={{
+                width: "24px",
+                height: "24px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "4px",
+              }}
               activeOption={activeOperation}
               setActiveOption={setActiveOperation}
               dropdownOptions={dropdownOperations}

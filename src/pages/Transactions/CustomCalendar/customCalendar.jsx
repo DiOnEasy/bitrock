@@ -10,6 +10,7 @@ export const CustomCalendar = () => {
   useEffect( () =>{
     setCalendarShown(!calendarShown)
   }, [date])
+  
   return (
     <div className={s.customCalendarWrapper}>
       <div

@@ -6,6 +6,7 @@ export const DropdownComponent = ({
   activeOption,
   setActiveOption,
   dropdownHeader,
+  style,
 }) => {
   const [isOpened, setIsOpened] = useState(false);
 
@@ -14,13 +15,17 @@ export const DropdownComponent = ({
       <div onClick={() => setIsOpened(!isOpened)} className={s.dropdownHeader}>
         {activeOption !== null ? (
           <>
-            <img src={dropdownOptions[activeOption].image} alt="" />
+            <div style={style}>
+              <img src={dropdownOptions[activeOption].image} alt="" />
+            </div>
             <span>{dropdownOptions[activeOption].text}</span>
           </>
         ) : (
           <span>{dropdownHeader}</span>
         )}
-        <span className={s.dropdownArrow}><img src="/img/notification-arrow.svg" alt="" /></span>
+        <span className={s.dropdownArrow}>
+          <img src="/img/notification-arrow.svg" alt="" />
+        </span>
       </div>
       {isOpened && (
         <div className={s.dropdownOptions}>
@@ -37,7 +42,9 @@ export const DropdownComponent = ({
                     : s.dropdownOption
                 }
               >
-                <img src={dropdownOptions[index].image} alt="" />{" "}
+                <div style={style}>
+                  <img src={dropdownOptions[index].image} alt="" />{" "}
+                </div>
                 <span>{dropdownOptions[index].text}</span>
               </div>
             );
