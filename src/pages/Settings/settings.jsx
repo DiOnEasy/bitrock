@@ -8,6 +8,7 @@ import s from "./settings.module.css";
 
 export const Settings = () => {
   return (
+    <div className={s.settingsWrapper}>
     <div className={s.settings}>
       <div className={s.settingsHeader}>Profile</div>
       <div className={s.settingsContent}>
@@ -86,6 +87,7 @@ export const Settings = () => {
           </SettingsInfoItem>
         </div>
       </div>
+    </div>
     </div>
   );
 };

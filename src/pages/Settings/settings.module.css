@@ -1,10 +1,14 @@
+.settingsWrapper{
+    min-height: 1264px;
+}
+
 .settings {
     background: #FCFFF2;
     padding: 40px;
     border-radius: 4px;
     margin-top: 40px;
     max-width: 1340px;
-
+    margin-bottom: 645px;
 }
 
 .settingsInfo {

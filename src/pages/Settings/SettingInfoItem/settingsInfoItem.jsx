@@ -11,7 +11,7 @@ export const SettingsInfoItem = ({ title, children }) => {
       >
         <span>{title}</span>
         <span className={s.settingsInfoItemArrow}>
-          <img src="/img/notification-arrow.svg" alt="" />
+          <img className={contentShown ? s.arrowRotated : ''} src="/img/notification-arrow.svg" alt="" />
         </span>
       </div>
       {contentShown && (

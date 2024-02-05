@@ -22,6 +22,7 @@ export const Payments = () => {
   }, [location.pathname]);
 
   return (
+    <div className={s.paymentsWrapper}>
     <div className={s.payments}>
       <PaymentsAmount />
       {!activateDepositPage && !isConfirmPayment && <ChooseDeposit />}
@@ -41,6 +42,7 @@ export const Payments = () => {
           amountOfDeposit={amountOfDeposit}
         />
       )}
+    </div>
     </div>
   );
 };

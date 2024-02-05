@@ -17,7 +17,7 @@ export const Help = () => {
   const { id } = useParams();
 
   return (
-    <>
+    <div className={s.helpWrapper}>
       {(newChat || id) && <AppNum />}
       <div className={s.help}>
         {!newChat && !id && (
@@ -51,6 +51,6 @@ export const Help = () => {
         {newChat && <CreateChat />}
         {!newChat && id && <Chat />}
       </div>
-    </>
+    </div>
   );
 };

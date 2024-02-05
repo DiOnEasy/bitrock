@@ -15,8 +15,8 @@ export const CalcAmount = () => {
   useEffect(() => {
     const deposit = parseFloat(depositAmount) || 0;
     const rate = parseFloat(interestRate) || 0;
-    const termValue = parseFloat(term) || 1; 
-    const result = (deposit * rate) / termValue;
+    const termValue = parseFloat(term) || 1;
+    const result = (deposit * (rate / 100)) / termValue;
     setTotalAmount(isNaN(result) ? "" : result.toFixed(2));
   }, [depositAmount, interestRate, term]);
 

@@ -1,3 +1,7 @@
+.paymentsWrapper {
+    min-height: 1244px;
+}
+
 .payments {
     margin-top: 60px;
     max-width: 1340px;

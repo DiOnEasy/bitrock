@@ -22,7 +22,7 @@
 }
 
 .links a {
-    padding: 23.5px 83px 23.5px 83px;
+    padding: 20px 83px 20px 83px;
     display: flex;
     align-items: center;
     color: #FAFAFA;
@@ -62,6 +62,7 @@
 }
 
 .profile__button {
+    color: #FFFFFF;
     background: #00B83F;
     border: none;
     padding: 12px 20px;
@@ -69,4 +70,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
+font-size: 16px;
+font-weight: 600;
+line-height: 20px;
+
+
 }
