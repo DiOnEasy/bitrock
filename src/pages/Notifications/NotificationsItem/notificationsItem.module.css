@@ -36,3 +36,9 @@
 .itemArrowActive{
     transform: rotate(180deg);
 }
+
+@media (max-width: 800px) {
+    .itemTop{
+        gap: 10px;
+    }
+}
