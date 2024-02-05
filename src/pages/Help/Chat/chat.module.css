@@ -90,9 +90,9 @@
 
 .fileInputWrapper {
     position: relative;
-    
-   
-    
+
+
+
 
 }
 
@@ -121,3 +121,56 @@
     cursor: pointer;
 }
 
+.fileNameMobile{
+    display: none;
+}
+
+.fileInputTextMobile{
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .fileInputText {
+        width: 160px;
+        gap: 5px;
+    }
+    .messagesInput{
+        width: 100%;
+    }
+}
+
+@media (max-width:800px) {
+    .inputs {
+        gap: 5px;
+    }
+
+    .fileInputText {
+        display: none;
+        font-size: 14px;
+        width: 115px;
+    }
+
+    
+    .fileNameMobile{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .fileNameLaptop{
+        display: none;
+    }
+   .fileInputTextMobile{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+    .fileInputTextMobile img{
+        border: 1px solid #222222;
+        padding: 3px;
+        border-radius: 4px;
+    }
+    .ownerMessageText, .messageText{
+        width: auto;
+    }
+}

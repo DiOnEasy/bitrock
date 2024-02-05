@@ -63,3 +63,37 @@
     line-height: 25px;
     color: #FFFFFF;
 }
+
+@media (max-width: 1400px) {
+    .helpItems{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .helpItems{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+
+    .newChatImg {
+        height: 40px;
+        width: 40px;
+    }
+
+   .newChatImg img {
+        width: 25px;
+        height: 25px;
+    }
+    .help{
+        padding: 30px 10px;
+    }
+}
+@media (max-width: 540px) {
+    .helpItems{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -52,3 +52,24 @@
     color: #224A28;
 
 }
+
+
+@media (max-width: 700px) {
+    .helpItem {
+        padding: 10px;
+    }
+
+    .appNum {
+        font-size: 18px;
+    }
+
+    .helpItemImg, .newChatImg {
+        height: 40px;
+        width: 40px;
+    }
+
+    .helpItemImg img, .newChatImg img {
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -29,6 +29,9 @@ export const Chat = () => {
           </div>
         </div>
       </div>
+      
+       
+     
       <div className={s.inputs}>
         <input
           className={s.messagesInput}
@@ -46,6 +49,9 @@ export const Chat = () => {
               <img src="/img/attach-file-icon.svg" alt="" />
             </p>
           )}
+          <p className={s.fileInputTextMobile}>
+            <img src="/img/attach-file-icon.svg" alt="" />
+          </p>
           <input
             onChange={(e) => {
               const file = e.target.files[0];
@@ -56,9 +62,14 @@ export const Chat = () => {
           />
         </div>
       </div>
+      {fileName ? (
+          <p className={s.fileNameMobile}>
+            {fileName}
+          </p>
+        ) : null}
       <div>
         <div className={s.messagesButton}>
-          <GreenButton text={'Send'} />
+          <GreenButton text={"Send"} />
         </div>
       </div>
     </div>

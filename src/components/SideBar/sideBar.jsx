@@ -23,13 +23,10 @@ export const SideBar = () => {
   };
 
   useEffect(() => {
-    // Установите начальное значение при монтировании компонента
     handleResize();
 
-    // Добавьте слушатель события изменения размера окна
     window.addEventListener('resize', handleResize);
 
-    // Очистите слушатель события при размонтировании компонента
     return () => {
       window.removeEventListener('resize', handleResize);
     };
