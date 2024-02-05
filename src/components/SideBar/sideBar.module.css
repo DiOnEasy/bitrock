@@ -1,8 +1,8 @@
-.sidebar {
+.sidebarWrapper {
     background: #224A28;
     box-shadow: 12px 0px 12px 0px #22222233;
     width: 328px;
-
+    min-height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,11 @@
 
 .logo {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 .links {
     display: flex;
@@ -32,7 +36,8 @@
     text-decoration: none;
     gap: 15px;
 }
-.activeLink{
+
+.activeLink {
     background: linear-gradient(90deg, rgba(166, 255, 66, 0.4) 0%, rgba(166, 255, 66, 0) 100%);
 }
 
@@ -70,9 +75,55 @@
     display: flex;
     align-items: center;
     gap: 10px;
-font-size: 16px;
-font-weight: 600;
-line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.burger {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    width: 100%;
+    padding: 0 10px;
+}
 
 
+.burgerActive {
+    padding: 0 30px;
+}
+
+.burger img {
+    width: 20px;
+}
+
+@media (max-width: 1280px) {
+    .sidebarWrapper {
+        width: auto;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .sidebar {
+        margin-top: 30px;
+    }
+
+    .sidebarClosed {
+        display: none;
+    }
+    .links{
+        margin-bottom: 0;
+    }
+    .links a {
+        padding: 15px 60px;
+    }
+    .profile{
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger{
+        padding: 0 5px;
+    }
 }

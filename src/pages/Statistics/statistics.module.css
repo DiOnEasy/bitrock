@@ -45,6 +45,7 @@
 }
 
 .statisticsItems {
+    gap: 10px;
     padding: 40px;
     background: #224A28;
     border-radius: 12px;
@@ -63,7 +64,11 @@
 
 .statisticsImg {
     background: #A6FF42;
-    padding: 8px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 100px;
 }
 
@@ -172,4 +177,98 @@
     font-weight: 400;
     line-height: 24px;
     color: #222222;
+}
+
+
+
+@media (max-width:1600px) {
+
+    .item {
+        width: auto;
+        gap: 15px;
+    }
+}
+
+@media (max-width:1400px) {
+
+    .statisticsInfoItem {
+        width: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .statisticsItems {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .statisticsArrow {
+        display: none;
+    }
+
+    .statisticsInfo {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .statisticsItems {
+        padding: 20px;
+    }
+
+    .statisticsAmount {
+        padding: 20px 40px;
+    }
+
+    .statisticsAmountNum {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .action {
+        padding: 20px 5px;
+    }
+
+    .actionButtons {
+        gap: 7px;
+    }
+
+    .withdraw,
+    .refinancing,
+    .closeDeposit,
+    .topUp {
+        padding: 20px 10px;
+        white-space: nowrap;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .actionButtons {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .statisticsImg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .statisticsImg img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .statisticsInfo {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .statisticsAmountNum{
+        font-size: 34px;
+        line-height: 40px;
+    }
 }

@@ -58,7 +58,7 @@
     background: #FFFFFF;
     padding: 4px 8px;
     border-radius: 100px;
-    box-shadow: 2px 2px 4px 0px #22222233 inset,-2px -2px 4px 0px #22222233 inset;
+    box-shadow: 2px 2px 4px 0px #22222233 inset, -2px -2px 4px 0px #22222233 inset;
     display: flex;
     align-items: center;
     width: 88px;
@@ -85,4 +85,36 @@
     text-decoration: none;
 
 
+}
+
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .statistics{
+        gap: 5px;
+    }
+    .statisticsIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .statisticsIcon img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .statistics{
+        gap: 10px;
+    }
+    .statisticsArrow{
+        display: none;
+    }
 }
