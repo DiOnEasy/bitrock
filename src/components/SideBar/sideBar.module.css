@@ -99,13 +99,18 @@
 
 @media (max-width: 1280px) {
     .sidebarWrapper {
+        padding: 20px 0;
         width: auto;
+        height: 100vh;
         position: fixed;
         z-index: 999;
     }
 
-    .sidebar {
-        margin-top: 30px;
+    .sidebar{
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     }
 
     .sidebarClosed {
@@ -117,8 +122,10 @@
     .links a {
         padding: 15px 60px;
     }
-    .profile{
-        margin-top: 25px;
+   
+
+    .logo, .sidebar, .profile{
+        margin: 0;
     }
 }
 
