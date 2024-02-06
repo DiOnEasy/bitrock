@@ -134,3 +134,15 @@
         padding: 0 5px;
     }
 }
+
+@media (max-width: 480px) {
+    .sidebarWrapperMobile{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .sidebar a {
+        width: 100%;
+    }
+}

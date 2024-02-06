@@ -18,22 +18,30 @@ export const SideBar = () => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
   const [isTablet, setIsTablet] = useState(null);
+  const [isPhone, setIsPhone] = useState(null);
   const handleResize = () => {
     setIsTablet(window.innerWidth <= 1280);
+    setIsPhone(window.innerWidth <= 480);
   };
 
   useEffect(() => {
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className={s.sidebarWrapper}>
+    <div
+      className={
+        (isPhone && sidebarOpened)
+          ? `${s.sidebarWrapper} ${s.sidebarWrapperMobile}`
+          : s.sidebarWrapper
+      }
+    >
       {isTablet && (
         <div
           onClick={() => setSidebarOpened(!sidebarOpened)}
