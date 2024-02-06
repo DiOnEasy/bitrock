@@ -1,4 +1,4 @@
-.settingsWrapper{
+.settingsWrapper {
     min-height: 1264px;
 }
 
@@ -81,4 +81,37 @@
     color: #8C8C8C;
 
 
+}
+
+@media (max-width: 1400px) {
+    .settingsBasicInfo {
+        padding: 20px;
+    }
+
+    .settingsBasicInfoItems {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .settingsContent {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .settings {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .settings {
+        padding: 20px 3px;
+    }
+
+    .paymentDetails {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

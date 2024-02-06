@@ -30,3 +30,9 @@
 .pointer {
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .inputWrapper{
+        padding: 20px 20px;
+    }
+}

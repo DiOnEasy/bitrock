@@ -24,3 +24,9 @@
 .arrowRotated{
     transform: rotate(180deg);
 }
+
+@media (max-width: 1400px) {
+    .settingsInfoItem{
+        padding: 20px;
+    }
+}

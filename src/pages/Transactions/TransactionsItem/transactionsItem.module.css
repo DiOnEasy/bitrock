@@ -26,10 +26,38 @@
     max-height: 19.2px;
 }
 
-.operationImg, .currencyImg{
+.operationImg,
+.currencyImg {
     width: 24px;
     height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .amount {
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 600px) {
+    .currency {
+        justify-content: center;
+    }
+
+    .currency span {
+        display: none;
+    }
+    .amount{
+        width: 75px;
+    }
+    .date,
+    .amount,
+    .amount,
+    .operation {
+        font-size: 14px;
+    }
 }
