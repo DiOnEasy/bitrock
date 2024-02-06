@@ -3,7 +3,7 @@ import "./calendar.css";
 import s from "./customCalendar.module.css";
 import Calendar from "react-calendar";
 
-export const CustomCalendar = () => {
+export const CustomCalendar = ({setSorting}) => {
   const [date, setDate] = useState(new Date());
   const [calendarShown, setCalendarShown] = useState(true);
 
@@ -29,6 +29,7 @@ export const CustomCalendar = () => {
         nextLabel={<img src="/img/dropdown/next.svg" />}
         prevLabel={<img src="/img/dropdown/prev.svg" />}
         locale="en-US"
+        onClickDay={(value) => setSorting(value)}
         onChange={setDate}
         value={date}
       />

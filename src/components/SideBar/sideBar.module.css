@@ -127,6 +127,9 @@
     .logo, .sidebar, .profile{
         margin: 0;
     }
+    .logo img{
+        width: 80px;
+    }
 }
 
 @media (max-width: 600px) {

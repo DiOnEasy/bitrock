@@ -7,6 +7,7 @@ export const DropdownComponent = ({
   setActiveOption,
   dropdownHeader,
   style,
+  setSorting,
 }) => {
   const [isOpened, setIsOpened] = useState(false);
 
@@ -35,6 +36,7 @@ export const DropdownComponent = ({
                 onClick={() => {
                   setIsOpened(false);
                   setActiveOption(index);
+                  setSorting(dropdownOptions[index].value)
                 }}
                 className={
                   activeOption == index
@@ -42,7 +44,7 @@ export const DropdownComponent = ({
                     : s.dropdownOption
                 }
               >
-                <div style={style}>
+                <div  style={style}>
                   <img src={dropdownOptions[index].image} alt="" />{" "}
                 </div>
                 <span>{dropdownOptions[index].text}</span>

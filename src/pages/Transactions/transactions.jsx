@@ -10,15 +10,60 @@ export const Transactions = () => {
   const [activeCurrency, setActiveCurrency] = useState(null);
   const [activeOperation, setActiveOperation] = useState(null);
 
+  const [transactionsDataComponent, setTransactionsDataComponent] =
+    useState(transactionsData);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [transactionsPerPage, setTransactionsPerPage] = useState(12);
 
   const indexOfLastTransaction = currentPage * transactionsPerPage;
   const indexOfFirstTransaction = indexOfLastTransaction - transactionsPerPage;
-  const currentTransactions = transactionsData.slice(
+  const currentTransactions = transactionsDataComponent.slice(
     indexOfFirstTransaction,
     indexOfLastTransaction
   );
+
+  const [sortingCurrency, setSortingCurrency] = useState(null);
+  const [sortingOperation, setSortingOperation] = useState(null);
+  const [sortingFromDate, setSortingFromDate] = useState(null);
+  const [sortingToDate, setSortingToDate] = useState(null);
+
+  
+
+  useEffect(() => {
+    filter();
+  }, [sortingCurrency, sortingOperation, sortingFromDate, sortingToDate]);
+
+  const filter = async () => {
+    let filteredData = transactionsData;
+    if (sortingCurrency != null) {
+      filteredData = filteredData.filter(
+        (transaction) => transaction.currency === sortingCurrency
+      );
+    }
+    if (sortingOperation != null) {
+      filteredData = filteredData.filter(
+        (transaction) => transaction.operation === sortingOperation
+      );
+    }
+
+    if (sortingFromDate != 0 && sortingToDate != null) {
+      console.log(
+        new Date(filteredData[0].date) >= new Date(sortingFromDate)  ,
+        new Date(sortingFromDate),
+        new Date(filteredData[0].date)
+      );
+      filteredData = filteredData.filter((transaction) => {
+        const transactionDate = new Date(transaction.date);
+        return (
+          transactionDate >= new Date(sortingFromDate) &&
+          transactionDate <= new Date(sortingToDate)
+        );
+      });
+    }
+
+    setTransactionsDataComponent(filteredData);
+  };
 
   return (
     <>
@@ -28,13 +73,14 @@ export const Transactions = () => {
           <div className={s.transactionsSortItem}>
             <p>Currency</p>
             <DropdownComponent
-            style={{
-              width: "40px",
-              height: "40px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+              setSorting={setSortingCurrency}
+              style={{
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
               activeOption={activeCurrency}
               setActiveOption={setActiveCurrency}
               dropdownOptions={dropdownCurrencies}
@@ -44,6 +90,7 @@ export const Transactions = () => {
           <div className={s.transactionsSortItem}>
             <p>Operations</p>
             <DropdownComponent
+              setSorting={setSortingOperation}
               style={{
                 width: "24px",
                 height: "24px",
@@ -61,10 +108,10 @@ export const Transactions = () => {
           <div className={s.transactionsSortItem}>
             <p>Period</p>
 
-            <CustomCalendar />
+            <CustomCalendar setSorting={setSortingFromDate} />
           </div>
           <div className={s.transactionsSortItem}>
-            <CustomCalendar />
+            <CustomCalendar setSorting={setSortingToDate} />
           </div>
         </div>
         <div className={s.transactionsHistory}>
@@ -128,7 +175,7 @@ const dropdownCurrencies = [
 const dropdownOperations = [
   {
     text: "Replenishment",
-    value: "Replenishment",
+    value: "Accrual",
     image: "/img/dropdown/replenishment.svg",
   },
   {
@@ -138,7 +185,7 @@ const dropdownOperations = [
   },
   {
     text: "Refinancing",
-    value: "Refinancing",
+    value: "Refinanced",
     image: "/img/dropdown/refinancing.svg",
   },
   {
