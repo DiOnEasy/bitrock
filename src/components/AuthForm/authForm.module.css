@@ -56,3 +56,18 @@ line-height: 19px;
 
 
 }
+
+@media (max-width: 800px) {
+    .form{
+        width: 100%;
+    }
+    .inputs{
+         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .form{
+        padding: 20px 10px;
+    }
+}

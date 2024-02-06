@@ -12,6 +12,11 @@
     background: #FAFAFA;
 }
 
+.appAuthWrapper{
+    width: 100%;
+    
+}
+
 @media (max-width: 1280px) {
     .appContent{
         padding-left: 50px;

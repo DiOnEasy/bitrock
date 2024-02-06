@@ -19,3 +19,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
+
+@media (max-width: 1400px) {
+    .depositItems {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .deposit{
+        padding: 20px 10px;
+    }
+    
+}

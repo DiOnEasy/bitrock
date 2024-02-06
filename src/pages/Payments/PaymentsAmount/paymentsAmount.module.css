@@ -107,3 +107,35 @@
     line-height: 24px;
     color: #222222;
 }
+
+@media (max-width: 1750px) {
+    .amountItem{
+        width: auto;
+        padding: 20px;
+
+    }
+    .amountButtons button{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width: 1024px) {
+   .amountNumber, .bonusPercentage {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .amountItems{
+        flex-direction: column;
+    }
+
+
+
+}
+
+
+@media (max-width: 480px) {
+    .amountButtons{
+        flex-direction: column;
+    }
+}

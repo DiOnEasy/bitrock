@@ -24,22 +24,25 @@ function App() {
   return (
     <>
       <div className={s.app}>
-      {path !== ("/login") && path !== ("/registration") ? <SideBar /> : null}
-        <div className={s.appContent}>
-        {path !== ("/login") && path !== ("/registration") ? <Header /> : null}
+        {path !== "/login" && path !== "/registration" ? <SideBar /> : null}
+        <div className={path !== "/login" && path !== "/registration" ? s.appContent : s.appAuthWrapper}>
+          {path !== "/login" && path !== "/registration" ? <Header /> : null}
           <Routes>
             <Route path="/" element={<Navigate to="/payments" />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/payments/activate-deposit" element={<Payments />} />
             <Route path="/payments/confirm-payment" element={<Payments />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/registration" element={<Registration />} />
+
             <Route path="/academy" element={<Academy />} />
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/statistics" element={<Statistics />} />
             <Route path="/help/:id?" element={<Help />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/transactions" element={<Transactions />} />
+          </Routes>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/registration" element={<Registration />} />
           </Routes>
         </div>
       </div>

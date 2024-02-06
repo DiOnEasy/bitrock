@@ -50,12 +50,33 @@
     color: #8C8C8C;
 }
 
-.confirmPaymentContent {
+/* .confirmPaymentContent {
     display: flex;
-    /* grid-template-columns: 2.1fr 1fr; */
+    grid-template-columns: 2.1fr 1fr;
     gap: 20px;
     justify-content: space-between;
+} */
+
+.confirmPaymentContent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 12 колонок по 1 фракции */
+    gap: 20px;
+    /* Отступ между колонками */
 }
+
+.confirmPaymentInfo {
+    grid-column: span 8;
+    /* Занимает 8 колонок */
+}
+
+.confirmPaymentQr {
+    grid-column: span 4;
+    /* Занимает 4 колонки */
+}
+
+
+
 
 .confirmPaymentInfo {
     width: 100%;
@@ -68,6 +89,7 @@
     background: #FFFFFF;
     padding: 20px 40px;
     border-radius: 4px;
+    width: 100%;
 }
 
 .confirmPaymentInfoItem p:nth-child(1) {
@@ -87,7 +109,12 @@
     line-height: 39px;
     color: #224A28;
 
+}
 
+.confirmPaymentData span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
 }
 
 .confirmPaymentCopyItem {
@@ -128,8 +155,9 @@
 
 .confirmPaymentQrImg img {
     background: #D9D9D9;
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
 }
 
 
@@ -139,4 +167,45 @@
     font-weight: 600;
     line-height: 20px;
     color: #222222;
+}
+
+
+@media (max-width: 1600px) {
+    .confirmPayment {
+        padding: 20px;
+    }
+
+    .confirmPaymentInfo {
+        grid-column: span 7;
+    }
+
+    .confirmPaymentQr {
+        grid-column: span 5;
+    }
+}
+
+@media (max-width: 1024px) {
+    .confirmPaymentQr {
+        display: none;
+    }
+
+    .confirmPaymentInfo {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 600px) {
+    .confirmPaymentInfoItem {
+        padding: 20px;
+    }
+
+    .confirmPaymentData {
+        font-size: 16px;
+
+    }
+
+    .confirmPaymentHeader {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
