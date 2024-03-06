@@ -20,6 +20,7 @@ export const Registration = () => {
             setPasswordValue={setPasswordValue}
             type={shown ? 'text' : 'password'}
             placeholder="Password"
+            isPassword
           />
           {passwordValue ? <img onClick={() => setShown(!shown)} src={shown ?  '/img/hide.svg' : "/img/show.svg"} alt="" /> : null}
 

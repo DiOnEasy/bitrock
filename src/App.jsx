@@ -15,6 +15,7 @@ import { SideBar } from "./components/SideBar/sideBar";
 import s from "./App.module.css";
 import { Header } from "./components/Header/header";
 import { useEffect, useState } from "react";
+import { Main } from "./pages/Main/main";
 function App() {
   const location = useLocation();
   const [path, setPath] = useState("");
@@ -24,9 +25,15 @@ function App() {
   return (
     <>
       <div className={s.app}>
-        {path !== "/login" && path !== "/registration" ? <SideBar /> : null}
-        <div className={path !== "/login" && path !== "/registration" ? s.appContent : s.appAuthWrapper}>
-          {path !== "/login" && path !== "/registration" ? <Header /> : null}
+        {path !== "/login" && path !== "/registration" && path !== "/main" ? <SideBar /> : null}
+        <div
+          className={
+            path !== "/login" && path !== "/registration" && path !== "/main"
+              ? s.appContent
+              : s.appAuthWrapper
+          }
+        >
+          {path !== "/login" && path !== "/registration" && path !== "/main" ? <Header /> : null}
           <Routes>
             <Route path="/" element={<Navigate to="/payments" />} />
             <Route path="/payments" element={<Payments />} />
@@ -43,6 +50,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/main" element={<Main />} />
           </Routes>
         </div>
       </div>

@@ -1,0 +1,124 @@
+.main {
+    background: #F3F5EB;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+
+.registration img:nth-child(1) {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    top: 20px;
+    left: auto;
+    max-width: 1464px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+.headerRight{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.headerLanguage {
+    background: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 4px 0px #22222233 inset, -2px -2px 4px 0px #22222233 inset;
+    display: flex;
+    align-items: center;
+    width: 88px;
+    cursor: pointer;
+}
+
+.buttonRegistration, .buttonLogin  {
+    display: flex;
+    align-items: center;
+    background: #00B83F;
+    border-radius: 12px;
+    padding: 12px 20px;
+
+}
+.buttonRegistration{
+    background: #00B83F;
+
+}
+
+.buttonLogin{
+    
+    background: transparent;
+    border: 1px solid #00B83F;
+    
+}
+
+.buttonRegistration a, .buttonLogin a {
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FFFFFF;
+    align-items: center;
+    text-decoration: none;
+
+
+}
+.buttonRegistration a{
+    color: #FFFFFF;
+
+}
+
+.buttonLogin a{
+ 
+    color: #00B83F;
+
+}
+
+.password__input {
+    position: relative;
+}
+
+.password__input img {
+    position: absolute;
+    top: 23.5px;
+    right: 42px;
+    cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+    .header{
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .registration, .content{
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .header{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .headerRight{
+        gap: 20px;
+    }
+}
