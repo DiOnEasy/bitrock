@@ -14,7 +14,7 @@
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: auto;
     max-width: 1464px;
