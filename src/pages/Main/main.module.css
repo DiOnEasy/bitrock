@@ -48,8 +48,10 @@
 }
 
 .buttonRegistration, .buttonLogin  {
+    min-width: 140px;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: #00B83F;
     border-radius: 12px;
     padding: 12px 20px;
@@ -115,7 +117,7 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
     .header{
         flex-direction: column;
         gap: 20px;
@@ -128,5 +130,11 @@
 @media (max-height: 680px) {
     .content{
         margin-top: 86px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerRight{
+        flex-direction: column;
     }
 }
