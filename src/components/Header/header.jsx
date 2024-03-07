@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import s from "./header.module.css";
+import { useState } from "react";
 
 export const Header = () => {
+  const [language, setLanguage] = useState(true);
   return (
     <div className={s.header}>
       <div className={s.statistics}>
@@ -34,8 +36,18 @@ export const Header = () => {
         </span>
       </div>
       <div className={s.headerButtons}>
-        <div className={s.headerLanguage}>
-          <img src="/img/russian-flag.svg" alt="" />
+        <div
+          className={
+            language
+              ? s.headerLanguage
+              : `${s.headerLanguage} ${s.headerLanguageEnglish}`
+          }
+          onClick={() => setLanguage(!language)}
+        >
+          <img
+            src={language ? "/img/russian-flag.svg" : "/img/usa-flag.svg"}
+            alt=""
+          />
         </div>
         <div className={s.button}>
           <Link to="">

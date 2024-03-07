@@ -65,6 +65,14 @@
     cursor: pointer;
 }
 
+.headerLanguage img {
+    width: 32px;
+}
+
+.headerLanguageEnglish {
+    justify-content: flex-end;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -97,24 +105,27 @@
 }
 
 @media (max-width: 700px) {
-    .statistics{
+    .statistics {
         gap: 5px;
     }
-    .statisticsIcon{
+
+    .statisticsIcon {
         width: 30px;
         height: 30px;
     }
-    .statisticsIcon img{
+
+    .statisticsIcon img {
         width: 25px;
         height: 25px;
     }
 }
 
 @media (max-width: 500px) {
-    .statistics{
+    .statistics {
         gap: 10px;
     }
-    .statisticsArrow{
+
+    .statisticsArrow {
         display: none;
     }
 }
