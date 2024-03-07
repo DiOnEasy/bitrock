@@ -1,6 +1,25 @@
+import { useState } from "react";
+import { PaymentPopup } from "../../components/PaymentPopup/paymentPopup";
 import s from "./statistics.module.css";
 
 export const Statistics = () => {
+  const [pupupOpened, setPopupOpened] = useState(false);
+  const [popupData, setPopupData] = useState({});
+
+  const topUpData = {
+    header: "Top up your deposit",
+    inputLabel: "Enter the replenishment amount in US dollars:",
+  };
+  const withdrawData = {
+    header: "Withdraw funds",
+    inputLabel: "Enter the withdrawal amount in US dollars:",
+  };
+
+  const handlePupupOpen = (data) => {
+    setPopupData(data);
+    setPopupOpened(true);
+  };
+
   return (
     <div className={s.statistics}>
       <div className={s.statisticsHeader}>
@@ -63,13 +82,13 @@ export const Statistics = () => {
         </div>
         <div className={s.actionButtons}>
           <div>
-            <button className={s.topUp}>
+            <button onClick={() => handlePupupOpen(topUpData)} className={s.topUp}>
               <span>Top up your deposit</span>
               <img src="/img/finance-icons/arrow.svg" alt="" />
             </button>
           </div>
           <div>
-            <button className={s.withdraw}>
+            <button onClick={() => handlePupupOpen(withdrawData)} className={s.withdraw}>
               <span>Withdraw funds</span>
               <img src="/img/finance-icons/arrow.svg" alt="" />
             </button>
@@ -110,6 +129,7 @@ export const Statistics = () => {
           <p>$0</p>
         </div>
       </div>
+      {pupupOpened && <PaymentPopup popupData={popupData} setPopupOpened={setPopupOpened}/>}
     </div>
   );
 };

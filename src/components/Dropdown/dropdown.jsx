@@ -36,7 +36,9 @@ export const DropdownComponent = ({
                 onClick={() => {
                   setIsOpened(false);
                   setActiveOption(index);
-                  setSorting(dropdownOptions[index].value)
+                  if(setSorting) {
+                    setSorting(dropdownOptions[index].value)
+                  }
                 }}
                 className={
                   activeOption == index

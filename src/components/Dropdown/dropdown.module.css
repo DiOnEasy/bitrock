@@ -4,7 +4,7 @@
 }
 
 .dropdownOptions {
-    z-index: 999;
+    z-index: 900;
     position: absolute;
     background: #E8ECD8;
     width: calc(100%);
@@ -27,6 +27,10 @@
     align-items: center;
     gap: 16px;
     cursor: pointer;
+}
+
+.dropdownOption div img, .dropdownHeader div img {
+    max-width: 32px;
 }
 
 .dropdownHeader {
