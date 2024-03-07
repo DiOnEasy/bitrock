@@ -1,4 +1,5 @@
 import s from "./pagination.module.css";
+
 export const Pagination = ({
   numberOfPages,
   currentPage,
@@ -7,29 +8,33 @@ export const Pagination = ({
   transactionsPerPage,
 }) => {
   console.log(transactionsData);
-  const pagesToShow = 3; // Определяем количество кнопок страниц для отображения
 
   const renderPageButtons = () => {
-    const buttons = [];
-    // Первая страница
-    buttons.push(
-      <button
-        key={1}
-        onClick={() => setCurrentPage(1)}
-        className={currentPage === 1 ? s.activePage : s.page}
-      >
-        1
-      </button>
-    );
+    const pagesToShow = 3; // Количество кнопок страницы, которые нужно отображать
 
-    // Добавляем 3 точки, если текущая страница больше чем третья
-    if (currentPage > pagesToShow + 1) {
-      buttons.push(<span key="dots1">...</span>);
+    let startPage = Math.max(1, currentPage - Math.floor(pagesToShow / 2));
+    let endPage = Math.min(numberOfPages, startPage + pagesToShow - 1);
+
+    // Корректируем startPage, чтобы показать pagesToShow кнопок, если currentPage близка к концам
+    if (endPage - startPage + 1 < pagesToShow) {
+      startPage = Math.max(1, endPage - pagesToShow + 1);
     }
 
-    // Кнопки со второй до предпоследней страницы
-    for (let i = Math.max(2, currentPage - 1); i <= Math.min(numberOfPages - 1, currentPage + 1); i++) {
-      buttons.push(
+    let pageButtons = [];
+
+    if (startPage > 1) {
+      pageButtons.push(
+        <button key="page-start" onClick={() => setCurrentPage(1)} className={s.page}>
+          1
+        </button>
+      );
+      if (startPage > 2) {
+        pageButtons.push(<span key="dots-start">...</span>);
+      }
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pageButtons.push(
         <button
           key={i}
           onClick={() => setCurrentPage(i)}
@@ -40,23 +45,22 @@ export const Pagination = ({
       );
     }
 
-    // Добавляем 3 точки, если текущая страница меньше чем предпоследняя
-    if (currentPage < numberOfPages - pagesToShow) {
-      buttons.push(<span key="dots2">...</span>);
+    if (endPage < numberOfPages) {
+      if (endPage < numberOfPages - 1) {
+        pageButtons.push(<span key="dots-end">...</span>);
+      }
+      pageButtons.push(
+        <button
+          key="page-end"
+          onClick={() => setCurrentPage(numberOfPages)}
+          className={s.page}
+        >
+          {numberOfPages}
+        </button>
+      );
     }
 
-    // Последняя страница
-    buttons.push(
-      <button
-        key={numberOfPages}
-        onClick={() => setCurrentPage(numberOfPages)}
-        className={currentPage === numberOfPages ? s.activePage : s.page}
-      >
-        {numberOfPages}
-      </button>
-    );
-
-    return buttons;
+    return pageButtons;
   };
 
   return (
@@ -72,7 +76,7 @@ export const Pagination = ({
       <button
         className={s.nextButton}
         onClick={() => setCurrentPage(currentPage + 1)}
-        disabled={currentPage === Math.ceil(transactionsData.length / transactionsPerPage)}
+        disabled={currentPage === numberOfPages}
       >
         <img src="/img/notification-arrow.svg" alt="" />
       </button>
