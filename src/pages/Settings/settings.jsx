@@ -14,6 +14,25 @@ export const Settings = () => {
   const hanleClick = () => {
     setPopupOpened(true);
   };
+  const [cardInfo, setCardInfo] = useState([
+    {
+      lastFourDigits: "8596",
+      expirationDate: "12/28",
+    },
+    {
+      lastFourDigits: "1234",
+      expirationDate: "01/25",
+    },
+  ]);
+
+  const handleDeleteCard = (index) => {
+    setCardInfo(prevCardInfo => {
+      const updatedCardInfo = [...prevCardInfo];
+      updatedCardInfo.splice(index, 1);
+      return updatedCardInfo;
+    });
+  };
+  
 
   return (
     <div className={s.settingsWrapper}>
@@ -77,6 +96,9 @@ export const Settings = () => {
                 {cardInfo.map((card, index) => {
                   return (
                     <PaymentCard
+                    onDelete={() => handleDeleteCard(index)}
+
+                      index={index}
                       lastFourDigits={card.lastFourDigits}
                       expirationDate={card.expirationDate}
                     />
@@ -106,13 +128,4 @@ export const Settings = () => {
   );
 };
 
-const cardInfo = [
-  {
-    lastFourDigits: "8596",
-    expirationDate: "12/28",
-  },
-  {
-    lastFourDigits: "8596",
-    expirationDate: "12/28",
-  },
-];
+
