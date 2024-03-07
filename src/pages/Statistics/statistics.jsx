@@ -3,7 +3,7 @@ import { PaymentPopup } from "../../components/PaymentPopup/paymentPopup";
 import s from "./statistics.module.css";
 
 export const Statistics = () => {
-  const [pupupOpened, setPopupOpened] = useState(false);
+  const [popupOpened, setPopupOpened] = useState(false);
   const [popupData, setPopupData] = useState({});
 
   const topUpData = {
@@ -129,7 +129,7 @@ export const Statistics = () => {
           <p>$0</p>
         </div>
       </div>
-      {pupupOpened && <PaymentPopup popupData={popupData} setPopupOpened={setPopupOpened}/>}
+      {popupOpened && <PaymentPopup popupData={popupData} setPopupOpened={setPopupOpened}/>}
     </div>
   );
 };

@@ -1,6 +1,24 @@
+import { useState } from "react";
 import s from "./paymentsAmount.module.css";
+import { PaymentPopup } from "../../../components/PaymentPopup/paymentPopup";
 
 export const PaymentsAmount = () => {
+  const [popupOpened, setPopupOpened] = useState(false);
+  const [popupData, setPopupData] = useState({});
+
+  const topUpData = {
+    header: "Replenish the amount of your account",
+    inputLabel: "Enter the replenishment amount in US dollars:",
+  };
+  const withdrawData = {
+    header: "Withdraw funds from your account wallet",
+    inputLabel: "Enter the withdrawal amount in US dollars:",
+  };
+
+  const handlePupupOpen = (data) => {
+    setPopupData(data);
+    setPopupOpened(true);
+  };
   return (
     <>
       <div className={s.header}>
@@ -13,11 +31,11 @@ export const PaymentsAmount = () => {
             <span className={s.amountNumber}>$1000.00</span>
           </p>
           <p className={s.amountButtons}>
-            <button>
+            <button onClick={() => handlePupupOpen(topUpData)}>
               <span>Replenish</span>
               <img src="/img/finance-icons/arrow.svg" alt="" />
             </button>
-            <button>
+            <button onClick={() => handlePupupOpen(withdrawData)}>
               <span>Bring out</span>
               <img src="/img/finance-icons/arrow.svg" alt="" />
             </button>
@@ -33,6 +51,8 @@ export const PaymentsAmount = () => {
           <p className={s.bonusTextBottom}>Make your first deposit to activate the bonus</p>
         </div>
       </div>
+      {popupOpened && <PaymentPopup popupData={popupData} setPopupOpened={setPopupOpened}/>}
+
     </>
   );
 };

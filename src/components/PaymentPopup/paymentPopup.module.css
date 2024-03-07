@@ -26,9 +26,15 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
+    margin: -10px -10px 0 0 ;
+}
+
+.close img{
+    width: 24px;
 }
 
 .header {
+    margin-top: 10px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
