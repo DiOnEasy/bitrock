@@ -9,6 +9,7 @@ import { CustomCalendar } from "./CustomCalendar/customCalendar";
 export const Transactions = () => {
   const [activeCurrency, setActiveCurrency] = useState(null);
   const [activeOperation, setActiveOperation] = useState(null);
+  const [numberOfPages, setNumberOfPages] = useState(1);
 
   const [transactionsDataComponent, setTransactionsDataComponent] =
     useState(transactionsData);
@@ -27,8 +28,6 @@ export const Transactions = () => {
   const [sortingOperation, setSortingOperation] = useState(null);
   const [sortingFromDate, setSortingFromDate] = useState(null);
   const [sortingToDate, setSortingToDate] = useState(null);
-
-  
 
   useEffect(() => {
     filter();
@@ -49,7 +48,7 @@ export const Transactions = () => {
 
     if (sortingFromDate != 0 && sortingToDate != null) {
       console.log(
-        new Date(filteredData[0].date) >= new Date(sortingFromDate)  ,
+        new Date(filteredData[0].date) >= new Date(sortingFromDate),
         new Date(sortingFromDate),
         new Date(filteredData[0].date)
       );
@@ -63,6 +62,9 @@ export const Transactions = () => {
     }
 
     setTransactionsDataComponent(filteredData);
+
+    setCurrentPage(1); // Сбрасываем текущую страницу на первую при изменении фильтров
+    setNumberOfPages(Math.ceil(filteredData.length / transactionsPerPage));
   };
 
   return (
@@ -140,6 +142,7 @@ export const Transactions = () => {
       </div>
 
       <Pagination
+        numberOfPages={numberOfPages}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         transactionsData={transactionsData}
